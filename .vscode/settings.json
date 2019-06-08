@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/animeshb/myWorks/myCode/pythonProgramming/pythonFundamentals/.env/bin/python3"
+    "python.pythonPath": "/home/animeshb/myWorks/myCode/pythonProgramming/pythonFundamentals/.env/bin/python3",
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true
 }
