@@ -1,9 +1,9 @@
-# Funtion with no arguments and no return type
+# Function with no arguments and no return type
 def foo():
     print("Hello, World")
 
 
-# Funtion with no arguments and a return type
+# Function with no arguments and a return type
 def meaning_of_life():
     return 42
 
@@ -13,13 +13,13 @@ def add_numbers(x, y):
     return x + y
 
 
-# Funtion with multi-line function body.
+# Function with multi-line function body.
 def greeting(name):
     greeting = "Hello "
     return greeting + name  # return is always optional in function.
 
 
-# Call the funtion
+# Call the Function
 foo()
 
 # Function which does not return anything explicitly will return None.
