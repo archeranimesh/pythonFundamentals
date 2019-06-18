@@ -14,3 +14,10 @@ print(names)
 
 # IndexError: pop from empty list
 # print(names.pop())
+
+# list is hetrogenerous.
+x = [1, 2, "a", "d"]
+
+type(x[0])  # <class 'int'>
+type(x[2])  # <class 'str'>
+
