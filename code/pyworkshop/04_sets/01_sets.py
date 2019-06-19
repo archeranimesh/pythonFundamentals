@@ -21,3 +21,5 @@ print(type(a))
 # to check we can use a function called hash()
 print(hash("aaaa"))
 # print(hash([]))  # TypeError: unhashable type: 'list'
+
+# print(names[0])  # TypeError: 'set' object does not support indexing
