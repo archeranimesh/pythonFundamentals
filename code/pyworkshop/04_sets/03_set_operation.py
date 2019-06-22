@@ -7,5 +7,3 @@ favourite_color = {"Red", "Green", "Blue", "Black"}
 print(rainbow_color | favourite_color)
 print(rainbow_color.union(favourite_color))
 
-#
-
