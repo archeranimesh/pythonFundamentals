@@ -26,7 +26,11 @@ print(c or c)  # Value of c, 0
 print([] or {})  # {}
 print([1] or {})  # [1]
 
+print("-" * 30)
 
 # Not Table
 print(not a)  # False
 print(not c)  # True
+
+print("1 == True: ", 1 == True)
+print("0 == False: ", 0 == False)
