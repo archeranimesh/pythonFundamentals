@@ -16,3 +16,6 @@ for value in rainbow.values():
 for i, (key, value) in enumerate(rainbow.items()):
     print(i, key, value)
 
+# .items returns a list of tuple, so we can get order.
+print(rainbow.items())
+print(type(rainbow.items()))
