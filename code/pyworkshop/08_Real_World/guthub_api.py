@@ -17,15 +17,18 @@ def repos_with_most_star(languages, sort="stars", order="desc"):
     query = create_query(languages)
     PARAMS = {"q": query, "sort": sort, "order": order}
     response = requests.get(GH_REPO_URL, params=PARAMS)
+    status_code = response.status_code
 
-    response_items = response.json()["items"]
+    if status_code != 200:
+        raise RuntimeError(f"An error occured, the status code was {status_code}")
+    else:
+        response_items = response.json()["items"]
+        # print("Response from GitHub: ", response.text)
+        # print("Keys in response: ", response_json.keys())
+        # print("Total Count: ", response_json["total_count"])
+        # print("incomplete_results: ", response_json["incomplete_results"])
 
-    # print("Response from GitHub: ", response.text)
-    # print("Keys in response: ", response_json.keys())
-    # print("Total Count: ", response_json["total_count"])
-    # print("incomplete_results: ", response_json["incomplete_results"])
-
-    return response_items
+        return response_items
 
 
 if __name__ == "__main__":
