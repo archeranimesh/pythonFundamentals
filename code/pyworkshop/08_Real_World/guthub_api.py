@@ -1,10 +1,21 @@
 import requests
 
 GH_REPO_URL = "https://api.github.com/search/repositories"
-PARAMS = {"q": "stars:>50000"}
 
 
-def repos_with_most_star():
+def create_query(languages, min_stars=50000):
+    query = f"stars:>{min_stars} "
+
+    for language in languages:
+        query += f"language:{language} "
+
+    return query
+
+
+def repos_with_most_star(languages):
+
+    query = create_query(languages)
+    PARAMS = {"q": query, "sort": "stars", "order": "desc"}
     response = requests.get(GH_REPO_URL, params=PARAMS)
 
     response_items = response.json()["items"]
@@ -18,7 +29,8 @@ def repos_with_most_star():
 
 
 if __name__ == "__main__":
-    results = repos_with_most_star()
+    languages = ["Python", "Javascript", "C"]
+    results = repos_with_most_star(languages)
     # print(results[0])
     for result in results:
         language = result["language"]
