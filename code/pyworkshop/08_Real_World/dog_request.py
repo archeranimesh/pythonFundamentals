@@ -2,7 +2,9 @@ import requests
 
 URL = "http://shibe.online/api/shibes?count=1"
 
-response = requests.get(URL)
+param = {"count": 10}
+
+response = requests.get(URL, params=param)
 
 print("Response status code: ", response.status_code)
 
