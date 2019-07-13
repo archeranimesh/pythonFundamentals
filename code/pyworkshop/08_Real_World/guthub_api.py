@@ -12,10 +12,10 @@ def create_query(languages, min_stars=50000):
     return query
 
 
-def repos_with_most_star(languages):
+def repos_with_most_star(languages, sort="stars", order="desc"):
 
     query = create_query(languages)
-    PARAMS = {"q": query, "sort": "stars", "order": "desc"}
+    PARAMS = {"q": query, "sort": sort, "order": order}
     response = requests.get(GH_REPO_URL, params=PARAMS)
 
     response_items = response.json()["items"]
